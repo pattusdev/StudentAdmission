@@ -26,6 +26,21 @@ function validateAdmission() {
         alert("Please enter a valid age.");
         return false;
     }
+    alert("Thank you! For your Requesting your Admission");
+    window.location.href = "index.html";
+    return false;
+}
+function validateLogin() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
 
-    return true;
+    // Add your authentication logic here.
+    // For this example, we'll assume a simple hardcoded check.
+    if (username === "admin" && password === "password") {
+        alert("Login successful!");
+        return true;
+    } else {
+        alert("Invalid username or password.");
+        return false;
+    }
 }
